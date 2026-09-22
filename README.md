@@ -18,6 +18,7 @@ Opening one of these HTTPS links attempts to launch the Webex desktop app. If th
 ## Safety and privacy
 
 - No analytics, cookies, network APIs, or third-party assets.
+- A responsive Webex-inspired light/dark interface follows the operating-system theme.
 - A strict Content Security Policy prevents injected scripts and unexpected connections.
 - Only one destination type is accepted per request.
 - IDs use a conservative allowlist; meeting URLs must use HTTPS on `webex.com` or one of its subdomains.
