@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#075985" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; connect-src 'none'" />
+    <title>Open in Webex</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="bridge.js" defer></script>
+  </head>
+  <body>
+    <main class="card" aria-live="polite">
+      <img class="logo" src="favicon.svg" alt="" width="72" height="72" />
+      <h1 id="title">Opening Webex…</h1>
+      <p id="status">Checking your link.</p>
+      <div id="actions" class="actions" hidden>
+        <a id="open-app" class="button primary" href="#">Open Webex app</a>
+        <a id="open-web" class="button secondary" href="#">Continue in browser</a>
+      </div>
+      <details id="test-tools">
+        <summary>Create a safe Outlook link</summary>
+        <form id="generator" novalidate>
+          <label for="kind">Link type</label>
+          <select id="kind" name="kind">
+            <option value="space">Space</option>
+            <option value="email">Direct message</option>
+            <option value="meeting">Meeting URL</option>
+          </select>
+          <label for="value">Value</label>
+          <input id="value" name="value" autocomplete="off" placeholder="Space ID" />
+          <label id="message-label" for="message">Message ID (optional)</label>
+          <input id="message" name="message" autocomplete="off" />
+          <button class="button primary" type="submit">Generate link</button>
+          <output id="generated" for="kind value message"></output>
+        </form>
+      </details>
+      <p class="privacy">No tracking, cookies, or data collection.</p>
+    </main>
+    <noscript>This page requires JavaScript to open Webex. You can still use the Webex web app at <a href="https://web.webex.com/">web.webex.com</a>.</noscript>
+  </body>
+</html>

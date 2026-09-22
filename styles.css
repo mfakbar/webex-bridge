@@ -1,0 +1,22 @@
+:root { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #12212b; background: #eef7fa; }
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 24px; background: radial-gradient(circle at top, #d9f4fb, #f7fafb 58%); }
+.card { width: min(100%, 520px); padding: 42px; text-align: center; border: 1px solid #c9dde5; border-radius: 24px; background: rgba(255,255,255,.94); box-shadow: 0 24px 70px rgba(18,72,91,.14); }
+.logo { margin-bottom: 12px; }
+h1 { margin: 0 0 10px; font-size: clamp(1.8rem, 6vw, 2.5rem); letter-spacing: -.035em; }
+p { line-height: 1.6; color: #48616e; }
+.actions { display: grid; gap: 10px; margin: 26px 0; }
+.button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 12px 18px; border: 0; border-radius: 12px; font: inherit; font-weight: 700; cursor: pointer; text-decoration: none; }
+.primary { color: white; background: #087ea4; }
+.primary:hover { background: #056b8c; }
+.secondary { color: #075985; background: #e5f4f8; }
+details { margin-top: 30px; text-align: left; border-top: 1px solid #dce9ee; padding-top: 22px; }
+summary { cursor: pointer; font-weight: 700; text-align: center; }
+form { display: grid; gap: 8px; margin-top: 20px; }
+label { margin-top: 8px; font-size: .9rem; font-weight: 700; }
+input, select { width: 100%; min-height: 44px; padding: 10px 12px; color: inherit; background: white; border: 1px solid #abc3cc; border-radius: 9px; font: inherit; }
+output { display: block; overflow-wrap: anywhere; min-height: 42px; padding: 10px; color: #284b5b; background: #edf6f8; border-radius: 8px; }
+.privacy { margin: 26px 0 0; font-size: .8rem; }
+:focus-visible { outline: 3px solid #f0b429; outline-offset: 3px; }
+@media (prefers-color-scheme: dark) { :root { color: #edf7fa; background: #071820; } body { background: radial-gradient(circle at top, #123845, #071820 60%); } .card { border-color: #27505f; background: rgba(10,31,40,.96); box-shadow: 0 24px 70px #02090c; } p { color: #b8cbd2; } .secondary { color: #cbeef8; background: #123d4b; } input, select { color: #edf7fa; background: #102c37; border-color: #416775; } output { color: #cce6ee; background: #0d2933; } details { border-color: #254650; } }
+@media (max-width: 520px) { .card { padding: 30px 22px; border-radius: 18px; } }
